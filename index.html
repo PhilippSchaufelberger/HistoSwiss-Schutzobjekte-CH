@@ -17,7 +17,7 @@ const map = L.map('map').setView([46.8182, 8.2275], 8);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
 
 const markers = L.markerClusterGroup({ chunkedLoading: true, maxClusterRadius: 80 });
-const geojsonUrl = 'https://github.com/PhilippSchaufelberger/HistoSwiss-Schutzobjekte-CH/blob/main/Schutzobjekte-CH.geojson;
+const geojsonUrl = 'https://raw.githubusercontent.com/PhilippSchaufelberger/HistoSwiss-Schutzobjekte-CH/main/Schutzobjekte-CH.geojson'
 
 fetch(geojsonUrl)
   .then(response => response.json())
